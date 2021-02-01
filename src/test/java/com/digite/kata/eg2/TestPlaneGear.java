@@ -27,4 +27,15 @@ public class TestPlaneGear {
 
         Assertions.assertEquals(Gear.D, plane.getGear());
     }
+
+    @Test
+    public void testPlaneHasNoParkGear(){
+        Assertions.assertThrows(RuntimeException.class, () -> plane.changeGear(Gear.P));
+    }
+
+    @Test
+    public void testPlaneHasNoNeutralGear(){
+        Assertions.assertThrows(RuntimeException.class, () -> plane.changeGear(Gear.N));
+    }
+
 }
