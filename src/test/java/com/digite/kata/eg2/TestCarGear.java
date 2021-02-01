@@ -11,6 +11,7 @@ public class TestCarGear {
     @BeforeEach
     public void setup(){
         car = new Car();
+        car.changeGear(Gear.N);
     }
 
     @Test
