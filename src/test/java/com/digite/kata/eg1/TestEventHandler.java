@@ -11,26 +11,26 @@ public class TestEventHandler {
     @BeforeEach
     public void setup() {
         vehicle = new Vehicle();
-        eventHandler = new EventHandler(vehicle);
+        eventHandler = new EventHandler();
     }
 
     @Test
     public void changeDrivingModeToSportsCar(){
-        eventHandler.changeDrivingMode(500, 10);
+        eventHandler.changeDrivingMode(vehicle, 500, 10);
         Assertions.assertEquals(500, vehicle.getPower());
         Assertions.assertEquals(10, vehicle.getSuspensionHeight());
     }
 
     @Test
     public void changeDrivingModeToComfortCar(){
-        eventHandler.changeDrivingMode(400, 20);
+        eventHandler.changeDrivingMode(vehicle, 400, 20);
         Assertions.assertEquals(400, vehicle.getPower());
         Assertions.assertEquals(20, vehicle.getSuspensionHeight());
     }
 
     @Test
     public void changeDrivingModeToDefaultCar(){
-        eventHandler.changeDrivingMode(400, 20);
+        eventHandler.changeDrivingMode(vehicle, 400, 20);
         Assertions.assertEquals(400, vehicle.getPower());
         Assertions.assertEquals(20, vehicle.getSuspensionHeight());
     }
