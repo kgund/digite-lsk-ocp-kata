@@ -24,14 +24,14 @@ public class TestEventHandler {
     @Test
     public void changeDrivingModeToComfortCar(){
         eventHandler.changeDrivingMode(400, 20);
-        Assertions.assertEquals(500, vehicle.getPower());
-        Assertions.assertEquals(10, vehicle.getSuspensionHeight());
+        Assertions.assertEquals(400, vehicle.getPower());
+        Assertions.assertEquals(20, vehicle.getSuspensionHeight());
     }
 
     @Test
     public void changeDrivingModeToDefaultCar(){
         eventHandler.changeDrivingMode(400, 20);
-        Assertions.assertEquals(500, vehicle.getPower());
-        Assertions.assertEquals(10, vehicle.getSuspensionHeight());
+        Assertions.assertEquals(400, vehicle.getPower());
+        Assertions.assertEquals(20, vehicle.getSuspensionHeight());
     }
 }
