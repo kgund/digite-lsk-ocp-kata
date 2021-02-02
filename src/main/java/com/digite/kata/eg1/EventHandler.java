@@ -24,6 +24,10 @@ public class EventHandler {
                 break;
         }
     }
+
+    public void changeDrivingMode(int power, int suspensionHeight) {
+
+    }
 }
 
 enum DrivingMode {
